@@ -15,10 +15,8 @@ const port = process.env.PORT || 8001;
 
 // Middleware
 app.use(cors({
-    // Make sure this matches your FRONTEND URL. 
-    // If your frontend runs on Vite, it might be http://localhost:5173
-    origin: process.env.CLIENT_URL || "http://localhost:5173", 
-    credentials: true
+  origin: "https://chat-application-eta-wheat.vercel.app",
+  credentials: true
 }));
 app.use(express.json());
 app.use(cookieParser()); // ✅ FIXED
